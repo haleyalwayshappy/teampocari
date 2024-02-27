@@ -27,18 +27,19 @@
 </head>
 
 <body>
-<div class="back-gray" id="clickBtn"></div>
-  <div class="intro-back" >
-    <div class="intro-title">
-        <a href="./home.html"/>
-        <img src="{% static '/firstPage/images/only_print.png' %}" alt=""/>
+    <div class="back-gray" id="clickBtn"></div>
+    <div class="intro-back">
+        <div class="intro-title">
+            <a href="home/"/>
+            <img src="{% static '/firstPage/images/only_print.png' %}" alt="TEAM POCARI"/>
+        </div>
     </div>
-  </div>
 </body>
+
 <script>
   document.getElementById("clickBtn").addEventListener("click",function(){
-    window.location.href = "./home.html"
-  })
+    window.location.href = "home/" {# 경로 바꾸기  #}
+  });
 </script>
 </html>
 

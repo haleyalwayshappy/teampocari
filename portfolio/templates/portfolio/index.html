@@ -1,11 +1,151 @@
+{% load static%}
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html lang="ko">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pocari sound</title>
+    <!-- saved from url-(0013) about : internet -->
+    <!--  open graph -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="pocari sound" />
+    <meta property="og:title" content="소개글 " />
+    <meta property="og:description" content="디테일 소개글 " />
+
+    <meta property="og:url" content="https://haleyalwayshappy.github.io/haley_pages" />
+
+    <!-- fonts -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet" />
+
+    <!-- icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"   rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+
+    <!-- user style  -->
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/css/icon.css' %}" />
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  </head>
+
 <body>
-<h2>포트폴ㄹ뤼뤼뤼오 페이지
-</h2>
+
+      <header class="header-area navbar-fade" id="header">
+        <nav class="navbar">
+          <a class="navbar-brand" href="./index.html"><img src="./asset/vertical_logo.png" alt="pocari sound"> </a>
+          <a class="navbar-toggler" id="toggleBtn"><i class="fa fa-bars"></i></a>
+          <div class="navbar-menu" id="menu">
+            <div class="nav-item">
+              <a class="nav-link" href="./home.html" id="navbarHome">Home</a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="./home.html"id="navbarService">Service</a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="./home.html"id="navbarPrice">price</a>
+            </div>
+
+            <div class="nav-item">
+              <a class="nav-link" href="./home.html"id="navbarPortfolio">portfolio</a>
+            </div>
+            <!-- <div class="nav-item">
+              <a class="nav-link" href="./home.html"id="navbarContact">contact</a>
+            </div> -->
+          </div>
+        </nav>
+      </header>
+
+    <!-- 포트폴리오 섹션 -->
+      <div> 포트폴리오에서도 모델을 가져올 수 있습니다!!!</div>
+  <div class="section-container">
+    <section class="portfolio-area" id="portfolio">
+      <div class="title"><a href="./portfolio.html">PORTFOLIO</a></div>
+
+      <div class="filter">
+        <ul class="list">
+          <li class="listItem active" id="all">ALL</li>
+          <li class="listItem" id="enterprise">기업홍보</li>
+          <li class="listItem" id="product">제품홍보</li>
+          <li class="listItem" id="vlog">브이로그</li>
+        </ul>
+      </div>
+
+      <div class="container">
+
+        <div class="sub-container enterprise" id="sub-enterprise">
+          <div class="category">기업홍보</div>
+
+            {% for pf in portfolios %}
+                <div> id {{ pf.id }} </div>
+                <div> title {{ pf.title }} </div>
+                <div> subject {{ pf.subject }} </div>
+                <div> field {{ pf.field }} </div>
+                <div> description {{ pf.description }} </div>
+                <div> number{{ pf.number }} </div>
+                <div> video_title {{ pf.video_title }} </div>
+                <div> video_url {{ pf.video_url }} </div>
+                <div> created_at {{ pf.created_at }} </div>
+                <div> img_path {{ pf.img_path }} </div>
+
+                <div class="filterItem enterprise" >
+                    <div class="image">
+                        <div class="overlay"></div>
+                        <img src="{% get_static_prefix %}{{ pf.img_path }}" alt="세라젬">
+                    </div>
+                    <div class="video">
+                        <iframe width="560" height="340" src="https://www.youtube.com/embed/LfLMngsTvL8?si=n2bk6ZfUI3giyDWF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="main">{{ pf.title }}</div>
+                    <div class="sub">{{ pf.field }}</div>
+                    <div class="text">{{ pf.description}} </div>
+                </div>
+            {% endfor %}
+
+          <div class="sub-category" id="more_enterprise"> 기업홍보 더 보기 </div>
+        </div>
+
+
+      </div>
+    </section>
+  </div>
+  <footer class="footer-area">
+    <div class="info">
+      <p style="font-size: 20px;">TEAM POCARI</p>
+      <p>대표 : 유승엽</p>
+      <p>CONTACT : 010-8834-9464</p>
+      <p>Address : Nonhyeon-dong 28-31, Seoul</p>
+      <p>Copyright © 2023.TeamPocari All rights reserved. </p>
+    </div>
+  </footer>
+
+  <div id="portfolioModal" class="modal">
+    <span class="close" id="modalClose">&times;</span>
+    <div class="modal-container">
+      <div id="modalVideo">video</div>
+      <img id="modalImage" style="display: none;" />
+
+      <div id="modalMain" class="modal-main">main</div>
+      <div id="modalSub" class="modal-sub">sub</div>
+      <div id="modalText" class="modal-text">text</div>
+    </div>
+  </div>
+
+
+ <!-- user script -->
+ <script src="{% static 'home/js/portfolio.js' %}"></script>
+
+
 </body>
 </html>
