@@ -21,7 +21,7 @@ div{
 * {
   margin: 0;
   padding: 0;
-  font-size: 0px;
+
 }
 
 body {
@@ -635,6 +635,10 @@ section {
   display: none;
 }
 
+
+.portfolio-item:nth-child(n+5) {
+    display: none;
+}
 #portfolioModal {
   display: none;
   position: fixed;
