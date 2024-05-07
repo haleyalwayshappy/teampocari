@@ -615,9 +615,7 @@ section {
   border-radius: 5px;
 } */
 
-.portfolio-area>.container>.sub-container>.filterItem>.video {
-  display: none;
-}
+
 
 .portfolio-area>.container>.sub-container>.filterItem>.main {
   font-size: 24px;
@@ -638,108 +636,6 @@ section {
 
 .portfolio-item:nth-child(n+5) {
     display: none;
-}
-#portfolioModal {
-  display: none;
-  position: fixed;
-  z-index: 100;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  /* overflow: auto; */
-  background-color: rgba(0, 0, 0, 0.9);
-  text-align: center;
-  overflow: scroll;
-}
-
-#portfolioModal>.close {
-  display: block;
-  text-align: right;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-  cursor: pointer;
-  padding: 0 20px;
-}
-
-#portfolioModal>.close:hover,
-#portfolioModal>.close:focus {
-  color: #bbb;
-}
-
-/* .modal-container {
-  width: 100%;
-  height: auto;
-  overflow:hidden;
-  
-} */
-
-.modal-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  /* 가로축(center)을 기준으로 중앙 정렬 */
-  align-items: center;
-  /* 세로축(center)을 기준으로 중앙 정렬 */
-  height: 60%;
-  overflow: hidden;
-}
-
-
-.modal-container>.modal-main {
-  display: flex;
-  /* Flexbox 레이아웃을 활성화 */
-  justify-content: center;
-  /* 가로 축(center)을 기준으로 중앙 정렬 */
-  align-items: center;
-  /* 세로 축(center)을 기준으로 중앙 정렬 */
-}
-
-@media (max-width: 768px) {
-  .modal-container>.modal-main>iframe {
-    align-items: center;
-    width: 30vh;
-    height: 100%;
-    /* 혹은 원하는 퍼센트 또는 픽셀 값 */
-  }
-}
-
-.modal-container>.modal-sub {
-  font-size: 20px;
-  color: white;
-  padding: 10px 0;
-  display: none;
-}
-
-.modal-container>.modal-text {
-  font-size: 16px;
-  color: #bbb;
-  display: none;
-
-}
-
-.modal-container>.modal-text img {
-  width: 80%;
-  overflow: hidden;
-}
-
-.modal-container>.modal-video {
-  width: 80vh;
-  /* 혹은 원하는 퍼센트 또는 픽셀 값 */
-  height: auto;
-  align-items: center;
-}
-
-@media (max-width: 768px) {
-  .modal-container>.modal-video {
-    align-items: center;
-    width: 20%;
-    /* 혹은 원하는 퍼센트 또는 픽셀 값 */
-  }
-
-
 }
 
 
@@ -799,23 +695,13 @@ section {
 .footer-area {
   height: auto;
   text-align: center;
-  background-color: #333;
+  background-color: #d6d9e0;
 }
 
 .footer-area * {
-  color: white;
-}
-
-.footer-area>.sns>.item {
-  display: inline-block;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.footer-area>.sns>.item>a {
-  text-decoration: none;
   color: #333;
 }
+
 
 .footer-area>.sns>.item>a {
   font-size: 24px;
@@ -849,21 +735,6 @@ section {
 }
 
 
-.enterprise {
-  padding: 8px;
-}
-
-.vlog {
-  padding: 8px;
-  /* background-color: green; */
-
-}
-
-.product {
-  padding: 8px;
-  /* background-color: blue; */
-
-}
 
 .sub-category {
   font-size: 20px;
@@ -886,33 +757,17 @@ section {
   display: inline-block;
 }
 
-/* .second-section {
-  max-width: 1000px;
-  margin: 0 auto;
-} */
 
-
-
-
-/* #sub-enterprise{
-  border: 4px solid rgba(45, 225, 75, 0.74);
-
-}
-#sub-product{
-  border: 4px solid #2DA5E1;
-
-}
-#sub-vlog{
-  border: 4px solid #e1c02d;
-
-} */
-
-
-
-.sub {
-  display: none;
-}
 
 .filterItem.text {
   display: none;
+}
+.card-img-top {
+        width: 200px;  /* 너비를 200픽셀로 설정 */
+        height: 200px; /* 높이를 200픽셀로 설정 */
+        object-fit: cover; /* 이미지 비율을 유지하면서 영역을 채움 */
+    }
+
+.sub-container{
+  padding:8px ;
 }
