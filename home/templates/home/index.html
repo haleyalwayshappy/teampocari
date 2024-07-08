@@ -84,9 +84,9 @@
                             <span class="border border-warning-subtle">
                             <img src="{{ pf.img_path.url|default:default_image }}" class="card-img-top" alt="{{ pf.title }}">
                             <div class="card-body">
-                               <div class="card-title text-success">타이틀 : {{ pf.title }}</div>
-                                <div class="card-text">내용 : {{ pf.description }}</div>
-                                <div class="card-text">생성일 : {{ pf.created_at }}</div>
+                               <div class="card-title text-success">{{ pf.title }}</div>
+                                <div class="card-text">{{ pf.description }}</div>
+{#                                <div class="card-text">생성일 : {{ pf.created_at }}</div>#}
 {#                                <div class="card-title">"필드" +{{ pf.field }}</div> 기업홍보 #}
 {#                                <div class="card-text">"id" + {{ pf.id }}+{{ pf.number }}</div>#}
 {#                                <div class="card-text">"number" + {{ pf.number }}</div>#}
@@ -115,9 +115,9 @@
                             <span class="border border-warning-subtle">
                             <img src="{{ pf.img_path.url }}" class="card-img-top" alt="{{ pf.title }}">
                             <div class="card-body">
-                                <div class="card-title">"타이틀" + {{ pf.title }}</div>
-                                <div class="card-text">"내용" + {{ pf.description }}</div>
-                                <div class="card-text">"생성일"{{ pf.created_at }}</div>
+                                <div class="card-title">{{ pf.title }}</div>
+                                <div class="card-text">{{ pf.description }}</div>
+{#                                <div class="card-text">"생성일"{{ pf.created_at }}</div>#}
                             </div>
                             </span>
                         </div>
@@ -140,10 +140,10 @@
                             <span class="border border-warning-subtle">
                             <img src="{{ pf.img_path.url }}" class="card-img-top" alt="{{ pf.title }}">
                             <div class="card-body">
-                                <div class="card-title">"타이틀" + {{ pf.title }}</div>
-                                <div class="card-title">"비디오유알엘 " + {{ pf.video_url }}</div>
-                                <div class="card-text">"내용" + {{ pf.description }}</div>
-                                <div class="card-text">"생성일"{{ pf.created_at }}</div>
+                                <div class="card-title">{{ pf.title }}</div>
+                                <div class="card-title">{{ pf.video_url }}</div>
+                                <div class="card-text">{{ pf.description }}</div>
+{#                                <div class="card-text">"생성일"{{ pf.created_at }}</div>#}
                             </div>
                             </span>
                         </div>

@@ -15,7 +15,7 @@ def index(request):
                }
 
 
-
+    print(context.items())
     # context['enterprise_portfolios'] = Portfolio.objects.filter(field=1)
     # context['product_portfolios'] = Portfolio.objects.filter(field=2)
     # context['vlog_portfolios'] = Portfolio.objects.filter(field=3)

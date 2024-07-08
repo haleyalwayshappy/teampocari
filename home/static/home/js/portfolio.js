@@ -23,7 +23,7 @@ var player; // Declare the player variable globally
                     function onYouTubeIframeAPIReady() {
                         player = new YT.Player('player', {
                             height: '360',
-                            width: '640',
+                            width: '100%',
                             videoId: videoId,
                             events: {
                                 'onReady': onPlayerReady,
